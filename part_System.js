@@ -1,11 +1,12 @@
-let can,r;
+let can,r,ptitle;
 let fireworks=[];
 let grav;let count=0;
 function setup() {
   // put setup code here
   can = createCanvas(800, 500);
   can.position(100, 50);can.class('can');
-  can.mousePressed(on_of);
+  can.mousePressed(on_of);ptitle=createP("A Fireworks Show");
+  ptitle.class('p');ptitle.position(450,-15);
 stroke(250,0,0);
 strokeWeight(5);
  r = random(10);
