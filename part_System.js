@@ -1,10 +1,11 @@
 let can,r;
 let fireworks=[];
-let grav;
+let grav;let count=0;
 function setup() {
   // put setup code here
   can = createCanvas(800, 500);
   can.position(100, 50);can.class('can');
+  can.mousePressed(on_of);
 stroke(250,0,0);
 strokeWeight(5);
  r = random(10);
@@ -23,3 +24,5 @@ fireworks.push(new particles(random(width),height,0,random(-12,-5)));r=random(10
 }
 r=random(10);
 }
+
+function on_of(){if(count%2==0){noLoop();}  else{loop();}count++;}
